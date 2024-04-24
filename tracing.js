@@ -33,4 +33,3 @@ module.exports = (serviceName) => {
    });
    return trace.getTracer(serviceName);
 };
-
