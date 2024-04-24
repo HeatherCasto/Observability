@@ -12,7 +12,7 @@ const { registerInstrumentations } = require("@opentelemetry/instrumentation");
 const { JaegerExporter } = require("@opentelemetry/exporter-jaeger");
 
 module.exports = (serviceName) => {
-   const exporter = new JaegerExporter({
+   const exporter = JaegerExporter({
        serviceName: serviceName,
        // Additional configuration options if needed
    });
@@ -33,4 +33,3 @@ module.exports = (serviceName) => {
    });
    return trace.getTracer(serviceName);
 };
-
