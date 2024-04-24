@@ -33,3 +33,9 @@ module.exports = (serviceName) => {
    });
    return trace.getTracer(serviceName);
 };
+
+       ],
+       tracerProvider: provider,
+   });
+   return trace.getTracer(serviceName);
+};
